@@ -3,26 +3,26 @@
 display height flex flex none margin 
 max-width width width
 */
-* {
-    box-sizing: border-box;
-}
 
 img {
-    /* image responsive, largeur maxi */
-    /* hauteur "auto" */
+    max-width: 100%;
+    height: auto;
 }
 
 .carrousel_parent-ecrans {
-    /* aligne horizontalement les enfants */
-    /* largeur du parent */
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
 
 }
 
 .carrousel_ecran {
-    /* largeur du parent pour chaque enfant */
-    /* permet de garder toute la largeur du parent */
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start
 }
 
 .carrousel_ecran figure {
-    /* enlève les marges par défaut */
+    margin: 0;
+
 }
