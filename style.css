@@ -56,3 +56,12 @@ img {
 .carrousel_btn-apres {
     right: 0;
 }
+
+.caroussel_liste-liens {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border-radius: 16px;
+    gap: 1rem;
+    list-style: none;
+}
