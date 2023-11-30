@@ -7,7 +7,8 @@
     <script src="//unpkg.com/alpinejs" defer></script>
      <link rel="stylesheet" href="style.css">
     <div class="carrousel" x-data="{}">
-        <button @click="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt;</button><button @click="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+        <button @click="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt;</button>
+        <button @click="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">&lt;</button>
         <div class="carrousel_parent-ecrans"x-ref="parent">
             <div id="ecran-1" class="carrousel_ecran">
                 <figure>
