@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="//unpkg.com/alpinejs" defer></script>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+  <body>
     <div class="carrousel" x-data="{}">
-        <button @click="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt;</button>
-        <button @click="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">&lt;</button>
-        <div class="carrousel_parent-ecrans"x-ref="parent">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" 
+        class="carrousel_btn carrousel_btn-avant"
+        aria-label="slide précedant">&lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+        class=" carrousel_btn carrousel_btn-apres" 
+        aria-label="slide suivant">&lt;</button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
             <div id="ecran-1" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1">
@@ -49,9 +57,5 @@
             <li><a href="#ecran-5" class="caroussel_lien">ecran 5</a></li>
         </ul>
     </div>
-
-</head>
-<body>
-    
-</body>
+  </body>
 </html>
